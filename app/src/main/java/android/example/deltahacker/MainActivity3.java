@@ -26,10 +26,10 @@ public class MainActivity3 extends AppCompatActivity {
         Button button8 = (Button) findViewById(R.id.button8);
         TextView textView7 = (TextView) findViewById(R.id.textView7);
 
-       /* SharedPreferences sharedPref = MainActivity3.this.getPreferences(Context.MODE_PRIVATE);
-        int highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), 0);*/
+        SharedPreferences sharedPref = MainActivity3.this.getPreferences(Context.MODE_PRIVATE);
+        int highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), 0);
 
-        textView7.setText(String.valueOf(counter[0]*50));
+        textView7.setText(String.valueOf(highScore));
 
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
